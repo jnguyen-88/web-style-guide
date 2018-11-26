@@ -8,6 +8,15 @@ $color-info: #aa71ce;
 $font-color-default: #878787;
 $white: #fff;
 
+// Grid Colors
+$grid-col-12: #67FAC4;
+$grid-col-6: #2F89D8;
+$grid-col-4: #3EE9F4;
+$grid-col-3: #C6A4FD;
+$grid-col-5: #7AD585;
+$grid-col-7: #D58E7A;
+$grid-col-8: #DD6551;
+
 // Fonts
 $font-stack-primary: Nunito, Arial;
 
@@ -17,8 +26,12 @@ $break-sm: 480px;
 $break-lg: 768px;
 
 // Margins
-$margin-xl: 10rem;
-$margin-lg: 5rem;
+$margin-xs: 1rem;
+$margin-sm: 1.875rem;
+$margin-lg: 2.25rem;
+$margin-xl: 4.125rem;
+
 
 // Padding
-$padding-default: 2rem;
+$padding-default: 1.25rem;
+$padding-sm: .8125rem;

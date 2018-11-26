@@ -1,0 +1,17 @@
+    // Image:
+    // .img--logo
+    // .img--frame
+    // .img--avatar
+
+
+.img--avatar {
+  width: 35%;
+  align-self: center;
+}
+
+.img--frame {
+  display: block;
+  border: 1px solid $font-color-default;
+  width: 100%;
+  padding: 1rem;
+}

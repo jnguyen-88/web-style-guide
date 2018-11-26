@@ -17,8 +17,9 @@
 
 .container {
   color: $font-color-default;
-  margin-top: $margin-lg;
-  @include flexy($dir: column)
+  margin-top: $margin-xl;
+  font-size: .6875em;
+  @include flexy($dir: column);
 }
 
 .grid__row {
@@ -26,15 +27,59 @@
   @include flexy($dir: column, $just: center, $al-items: center);
   margin-bottom: $margin-xl;
   p {
-    font-size: 2rem;
-    padding: 0 2rem;
+    font-size: 1.25rem;
+    padding: 0 1.25rem;
     font-weight: 400;
   }
 }
 
+.grid__col--3.theme__colors {
+  background-color: $grid-col-3;
+  width: 100%;
+  @include grid-box;
+}
+
+.grid__col--4 {
+  width: 100%;
+
+  &.theme__colors {
+    background-color: $grid-col-4;
+    @include grid-box;
+  }
+}
+
+.grid__col--5 {
+  background-color: $grid-col-5;
+  width: 100%;
+  @include grid-box;
+}
+
+.grid__col--6 {
+  @include flexy($dir: column);
+  width: 100%;
+  margin-bottom: $margin-lg;
+
+  &.theme__colors {
+    background-color: $grid-col-6;
+    @include grid-box;
+  }
+}
+
+.grid__col--7 {
+  background-color: $grid-col-7;
+  width: 100%;
+  @include grid-box;
+}
+
 .grid__col--8 {
+  &.theme__colors {
+    width: 100%;
+    background-color: $grid-col-8;
+    @include grid-box;
+  }
+
   .link {
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
     color: $color-default;
@@ -47,4 +92,16 @@
   margin-top: $margin-lg;
   margin-bottom: $margin-xl;
 }
+
+.grid__col--12 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &.theme__colors {
+    background-color: $grid-col-12;
+    @include grid-box;
+  }
+}
+
 
