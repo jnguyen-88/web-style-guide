@@ -1,0 +1,30 @@
+    // Typography:
+    // .container
+    // .link
+    // .blockquote
+    // .headline--primary
+    // .headline--secondary
+
+    .headline--primary {
+      padding: 0 5rem;
+      font-weight: bold;
+      font-size: 3rem;
+      color: $color-primary;
+    }
+
+    .headline--secondary {
+      padding-left: 3.2rem;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+
+    .blockquote {
+      font-weight: 100;
+      font-size: 3.5rem;
+      font-style: italic;
+      border-left: 10px solid $color-primary;
+      border-radius: 5px;
+      padding-left: 3rem;
+      margin-left: $margin-lg;
+      line-height: 1;
+    }

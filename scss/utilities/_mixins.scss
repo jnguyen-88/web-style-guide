@@ -1,0 +1,20 @@
+// Create Flex Container
+
+@mixin flexy (
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $al-items: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $al-items;
+}
+
+@mixin center ($w:null) {
+  width: $w;
+  margin-left: auto;
+  margin-right: auto;
+}

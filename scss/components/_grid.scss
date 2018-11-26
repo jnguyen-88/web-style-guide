@@ -1,0 +1,50 @@
+    // Grid:
+    // .container
+    // .grid__row
+    // .grid__col--2
+    // .grid__col--3
+    // .grid__col--4
+    // .grid__col--5
+    // .grid__col--6
+    // .grid__col--7
+    // .grid__col--8
+    // .grid__col--9
+    // .grid__col--10
+    // .grid__col--11
+    // .grid__col--12
+    // .centered
+    // .theme__colors
+
+.container {
+  color: $font-color-default;
+  margin-top: $margin-lg;
+  @include flexy($dir: column)
+}
+
+.grid__row {
+  @include center(85%);
+  @include flexy($dir: column, $just: center, $al-items: center);
+  margin-bottom: $margin-xl;
+  p {
+    font-size: 2rem;
+    padding: 0 2rem;
+    font-weight: 400;
+  }
+}
+
+.grid__col--8 {
+  .link {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-default;
+  }
+}
+
+.grid__col--9 {
+  width: 100%;
+  text-align: center;
+  margin-top: $margin-lg;
+  margin-bottom: $margin-xl;
+}
+
