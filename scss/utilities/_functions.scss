@@ -1,0 +1,5 @@
+@function calc-col($col) {
+  $total-col: 12;
+  @return percentage($col / $total-col);
+}
+

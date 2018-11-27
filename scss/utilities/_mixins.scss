@@ -1,6 +1,6 @@
-/***********************
-Create Flex Container
-************************/
+//========================
+//Create Flex Container
+//========================
 
 @mixin flexy (
   $disp: flex,
@@ -15,9 +15,9 @@ Create Flex Container
   align-items: $al-items;
 }
 
-/***********************
-Create Grid
-************************/
+//========================
+//Create Grid
+//========================
 
 @mixin grid-box($grid-num) {
   $color-value: map-get($grid-colors, $grid-num);
@@ -49,9 +49,9 @@ Create Grid
   font-size: 1.3rem;
 }
 
-/***********************
-Create Button
-************************/
+//========================
+//Create Button
+//========================
 
 @mixin button($btn-color) {
   background-color: $btn-color;
@@ -63,4 +63,13 @@ Create Button
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: $margin-xs;
+}
+
+//========================
+//Media Query
+//========================
+@mixin tablet {
+  @media (min-width: $break-sm) {
+    @content;
+  }
 }

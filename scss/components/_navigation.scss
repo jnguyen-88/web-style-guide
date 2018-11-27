@@ -1,9 +1,5 @@
-// Navigation:
-//     .nav__item
-
-
 .nav__item {
-  font-size: 1.5625rem;
+  font-size: 1.2rem;
   list-style: none;
   background-color: $white;
   border-radius: 7px;
@@ -15,10 +11,26 @@
     text-decoration: none;
     color: $font-color-default;
     border-radius: 7px;
+    transition: all .2s;
     
     &:hover {
-    background-color: $color-primary;
-    color: $white;
+      background-color: $color-primary;
+      color: $white;
     }
+  }
+
+}
+
+@include tablet {
+  .nav {
+    @include flexy($dir:row, $just: space-between, $al-items: center)
+  }
+  .grid__col--3 {
+    padding-left: 2.2rem;
+    flex: 1 1 0 ;
+  }
+  .grid__col--9 {
+    flex: 1 1 0 ;
+    padding-right: 2rem;
   }
 }
