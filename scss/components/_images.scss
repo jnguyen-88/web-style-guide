@@ -3,15 +3,19 @@
     // .img--frame
     // .img--avatar
 
+.img {
+  &--frame {
+    display: block;
+    border: 1px solid $font-color-default;
+    width: 90%;
+    padding: 1rem;
+    @extend %center;
+  }
 
-.img--avatar {
-  width: 35%;
-  align-self: center;
-}
+  &--avatar {
+    width: 40%;
+    align-self: center;
+    margin-top: $margin-sm;
+  }
 
-.img--frame {
-  display: block;
-  border: 1px solid $font-color-default;
-  width: 100%;
-  padding: 1rem;
 }

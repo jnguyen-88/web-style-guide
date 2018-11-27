@@ -6,62 +6,14 @@
     // .btn--info
     // .theme__colors
 
-    .btn--default {
-      background-color: $color-default;
-      padding: $padding-sm;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: $margin-xs;
-    }
 
-    .btn--success {
-      background-color: $color-success;
-      padding: $padding-sm;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: $margin-xs;
-    }
+    //array of Button Names
+    $buttonList: ('default', 'success', 'error', 'warning', 'info');
 
-    .btn--error {
-      background-color: $color-error;
-      padding: $padding-sm;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: $margin-xs;
-    }
-
-    .btn--warning {
-      background-color: $color-warning;
-      padding: $padding-sm;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: $margin-xs;
-    }
-
-    .btn--info {
-      background-color: $color-info;
-      padding: $padding-sm;
-      color: $white;
-      border: none;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
+    //looping w/ 'button' mixin
+    @each $button in $buttonList {
+      .btn--#{$button} {
+        @include button(map-get($btn-colors, #{$button}))
+      }
     }
 

@@ -1,4 +1,6 @@
-// Create Flex Container
+/***********************
+Create Flex Container
+************************/
 
 @mixin flexy (
   $disp: flex,
@@ -13,14 +15,52 @@
   align-items: $al-items;
 }
 
-@mixin center ($w:null) {
-  width: $w;
-  margin-left: auto;
-  margin-right: auto;
-}
+/***********************
+Create Grid
+************************/
 
-@mixin grid-box {
+@mixin grid-box($grid-num) {
+  $color-value: map-get($grid-colors, $grid-num);
+  @if $grid-num == 'col--12' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--3' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--4' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--5' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--6' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--7' {
+    background-color: $color-value;
+  }
+  @else if $grid-num == 'col--8' {
+    background-color: $color-value;
+  }
   padding: $padding-sm;
   margin-bottom: $margin-xs;
   border-radius: 5px;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+/***********************
+Create Button
+************************/
+
+@mixin button($btn-color) {
+  background-color: $btn-color;
+  padding: $padding-sm;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: $margin-xs;
 }

@@ -6,16 +6,16 @@
     // .headline--secondary
 
     .headline--primary {
-      padding: 0 5rem;
+      padding: 0 3rem;
       font-weight: bold;
       font-size: 1.875rem;
       color: $color-primary;
     }
 
     .headline--secondary {
-      padding-left: 2rem;
       font-size: 1.25rem;
       font-weight: 100;
+      margin-bottom: $margin-lg;
     }
 
     .blockquote {
@@ -27,4 +27,13 @@
       padding-left: 1.875rem;
       margin-left: $margin-xl;
       line-height: 1;
+    }
+
+    .container {
+      .link {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: $color-default;
+      }
     }
