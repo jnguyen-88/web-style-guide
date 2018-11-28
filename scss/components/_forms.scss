@@ -1,23 +1,18 @@
-    // Forms:
-    // .form
-    // .form__label--hidden
-    // .form__input
+.form {
+  @include flexy($dir: column);
 
-    .form {
-      @include flexy($dir: column);
+  &__label--hidden {
+    display: none;
+  }
 
-      &__label--hidden {
-        display: none;
-      }
-
-      &__input {
-        border: none;
-        border-bottom: 5px solid $color-primary;
-        padding: $padding-sm;
-        margin-bottom: $margin-sm;
-        font-size: .9375rem;
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
+  &__input {
+    border: none;
+    border-bottom: 5px solid $color-primary;
+    padding: $padding-sm;
+    margin-bottom: $margin-sm;
+    font-size: .9375rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

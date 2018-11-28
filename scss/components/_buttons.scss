@@ -1,17 +1,24 @@
-//array of Button Names
 $buttonList: ('default', 'success', 'error', 'warning', 'info');
-
 
 //looping w/ 'button' mixin
 @each $button in $buttonList {
     .btn--#{$button} {
-        @include button(map-get($btn-colors, #{$button}));
-        @include tablet {
-            flex: 1;
-            margin: 0 1rem;
-        }
+      outline: none;
+      @include button(map-get($btn-colors, #{$button}));
+      @include tablet {
+          flex: 1;
+          margin: 0 1rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: darken( (map-get($btn-colors, #{$button}) ), 25%);
+      }
     }
-}
+};
 
 
 

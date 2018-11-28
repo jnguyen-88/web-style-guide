@@ -23,8 +23,10 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
   @extend %center;
   @include flexy($dir: column, $just: center, $al-items: center);
   margin-bottom: $margin-xl;
+
   @include tablet {
     flex-direction: row;
+    
     >.theme__colors {
       text-align: center;
       margin-right: $margin-xs;
@@ -47,22 +49,26 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
 }
 
 .grid {
+
   &__col--12,
   &__col--9,
   &__col--6,
   &__col--4 {
     width: 100%;
   }
+
   &__col--9 {
     text-align: center;
   }
 }
 
 .grid {
+
   &__col--6,
   &__col--12 {
     @include flexy($dir: column); 
   }
+
   &__col--6 {
     width: calc-col;
   }

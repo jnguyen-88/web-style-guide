@@ -313,6 +313,7 @@ Center Elements
   margin-right: auto; }
 
 .btn--default {
+  outline: none;
   background-color: #50fce5;
   padding: 0.8125rem;
   color: #fff;
@@ -326,8 +327,13 @@ Center Elements
     .btn--default {
       flex: 1;
       margin: 0 1rem; } }
+  .btn--default:hover {
+    cursor: pointer; }
+  .btn--default:active {
+    background-color: #03c9af; }
 
 .btn--success {
+  outline: none;
   background-color: #75f97c;
   padding: 0.8125rem;
   color: #fff;
@@ -341,8 +347,13 @@ Center Elements
     .btn--success {
       flex: 1;
       margin: 0 1rem; } }
+  .btn--success:hover {
+    cursor: pointer; }
+  .btn--success:active {
+    background-color: #0ae516; }
 
 .btn--error {
+  outline: none;
   background-color: #f9849d;
   padding: 0.8125rem;
   color: #fff;
@@ -356,8 +367,13 @@ Center Elements
     .btn--error {
       flex: 1;
       margin: 0 1rem; } }
+  .btn--error:hover {
+    cursor: pointer; }
+  .btn--error:active {
+    background-color: #f20c3d; }
 
 .btn--warning {
+  outline: none;
   background-color: #f25d07;
   padding: 0.8125rem;
   color: #fff;
@@ -371,8 +387,13 @@ Center Elements
     .btn--warning {
       flex: 1;
       margin: 0 1rem; } }
+  .btn--warning:hover {
+    cursor: pointer; }
+  .btn--warning:active {
+    background-color: #762d03; }
 
 .btn--info {
+  outline: none;
   background-color: #aa71ce;
   padding: 0.8125rem;
   color: #fff;
@@ -386,6 +407,10 @@ Center Elements
     .btn--info {
       flex: 1;
       margin: 0 1rem; } }
+  .btn--info:hover {
+    cursor: pointer; }
+  .btn--info:active {
+    background-color: #6a318e; }
 
 .form {
   display: flex;
