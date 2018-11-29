@@ -7,7 +7,7 @@ $buttonList: ('default', 'success', 'error', 'warning', 'info');
       @include button(map-get($btn-colors, #{$button}));
       @include tablet {
           flex: 1;
-          margin: 0 1rem;
+          margin: 0 .5rem;
       }
 
       &:hover {
@@ -19,6 +19,14 @@ $buttonList: ('default', 'success', 'error', 'warning', 'info');
       }
     }
 };
+
+@include tablet {
+
+  .grid__col--12 {
+    @include flexy($dir: row, $just: center);
+    p {text-align: left;}
+  }
+}
 
 
 

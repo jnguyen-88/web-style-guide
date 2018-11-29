@@ -23,37 +23,21 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
   @extend %center;
   @include flexy($dir: column, $just: center, $al-items: center);
   margin-bottom: $margin-xl;
-
-  @include tablet {
-    flex-direction: row;
-    
-    >.theme__colors {
-      text-align: center;
-      margin-right: $margin-xs;
-    }
-    .centered {
-      width: 58.333333%;
-      margin: 0 auto;
-    }
-    .grid__col--8 {
-      flex: 2 0 0;
-      padding-right: 1rem;
-    }
-    .grid__col--4 {
-      flex: 1 0 0;
-    }
-    .grid__col--12 {
-      @include flexy($dir: row, $just: space-around);
-    }
-  }
 }
+
 
 .grid {
 
   &__col--12,
+  &__col--11,
+  &__col--10,
   &__col--9,
+  &__col--8,
+  &__col--7,
   &__col--6,
-  &__col--4 {
+  &__col--5,
+  &__col--4, 
+  &__col--3, {
     width: 100%;
   }
 
@@ -65,14 +49,104 @@ $colNum: ('col--3', 'col--4', 'col--5', 'col--6', 'col--7', 'col--8', 'col--12')
 .grid {
 
   &__col--6,
-  &__col--12 {
+  &__col--12,
+  &__col--3 {
     @include flexy($dir: column); 
   }
 
-  &__col--6 {
-    width: calc-col;
+  &__col--3>* {align-self: center;}
+
+  &__col--6 {width: calc-col;}
+}
+
+
+@include tablet {
+
+          .grid__col--12 {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+        }
+
+  .grid__row {
+    @include flexy($dir: row, $just: center, $al-items: center);
+
+    >.theme__colors {
+        text-align: center;
+    }
+  }
+
+  .grid {
+    flex-direction: row;
+    align-items: center;
+    // >.theme__colors {
+    //   // text-align: center;
+    // }
+    &__col--12 {
+      width: calc-percent(12);
+    }
+    &__col--9 {
+      width: calc-percent(9);
+    }
+    &__col--8 {
+      width: calc-percent(8);
+      max-width: 712.83px;
+      margin-right: 1rem;
+    }
+    &__col--7 {
+      width: calc-percent(7);
+    }
+    &__col--6 {
+      width: calc-percent(6);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+    &__col--5 {
+      width: calc-percent(5);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+    &__col--4 {
+      width: calc-percent(4);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+    &__col--3 {
+      width: calc-percent(3);
+      &:not(:last-child) {margin-right: 1rem;}
+    }
+    &__col--3>* {align-self: flex-start;}
   }
 }
+
+
+
+
+
+
+
+  // tablet view
+  // @include tablet {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   >.theme__colors {
+  //     text-align: center;
+  //     margin-right: $margin-xs;
+  //   }
+  //   .centered {
+  //     width: 58.333333%;
+  //     margin: 0 auto;
+  //   }
+  //   .grid__col--8 {
+  //     padding-right: 2rem;
+  //   }
+  //   .grid__col--4 {
+  //     flex: 1;
+  //   }
+  //   .grid__col--5 {
+  //     flex: 0 0 41.67%;
+  //   }
+  //   .grid__col--12 {
+  //     @include flexy($dir: row, $just: space-around);
+  //   }
+  // }
 
 
 

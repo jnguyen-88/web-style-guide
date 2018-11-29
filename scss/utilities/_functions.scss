@@ -3,3 +3,9 @@
   @return percentage($col / $total-col);
 }
 
+@function calc-percent($col) {
+  $get-col: $col;
+  $total-col: 12;
+  @return percentage($get-col / $total-col);
+}
+
